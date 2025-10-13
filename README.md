@@ -1,1 +1,8 @@
-# Testing-of-Student-Management-System-Using-Java
+This project, titled “ Testing of Student Management System Using Java”, focuses on testing a simple console-based Java application that manages student records through basic CRUD operations — Create, Read, Update, and Delete. As a tester, the main objective of this project is to manually verify each functionality of the system, identify defects, and ensure that all features work as expected. It demonstrates the process of creating test cases, executing them, and preparing bug reports to ensure the quality and reliability of the application.
+| **Test Case ID** | **Scenario**                   | **Steps**                          | **Expected Result**          | **Actual Result** | **Status** |
+| ---------------- | ------------------------------ | ---------------------------------- | ---------------------------- | ----------------- | ---------- |
+| TC_01            | Add student with valid details | Enter ID=1, Name=Sumit, Age=22     | Student added successfully   | As expected       | Pass       |
+| TC_02            | View students after adding     | Choose “View Students”             | Displays added student list  | As expected       | Pass       |
+| TC_03            | Update student details         | Enter ID=1 → change Name to “Amit” | Updated successfully         | As expected       | Pass       |
+| TC_04            | Delete student                 | Enter ID=1                         | Student deleted successfully | As expected       | Pass       |
+| TC_05            | Delete non-existent student    | Enter ID=5                         | Shows “Student not found”    | As expected       | Pass       |
