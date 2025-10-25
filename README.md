@@ -1,8 +1,18 @@
 This project, titled “ Testing of Student Management System Using Java”, focuses on testing a simple console-based Java application that manages student records through basic CRUD operations — Create, Read, Update, and Delete. As a tester, the main objective of this project is to manually verify each functionality of the system, identify defects, and ensure that all features work as expected. It demonstrates the process of creating test cases, executing them, and preparing bug reports to ensure the quality and reliability of the application.
-| **Test Case ID** | **Scenario**                   | **Steps**                          | **Expected Result**          | **Actual Result** | **Status** |
-| ---------------- | ------------------------------ | ---------------------------------- | ---------------------------- | ----------------- | ---------- |
-| TC_01            | Add student with valid details | Enter ID=1, Name=Sumit, Age=22     | Student added successfully   | As expected       | Pass       |
-| TC_02            | View students after adding     | Choose “View Students”             | Displays added student list  | As expected       | Pass       |
-| TC_03            | Update student details         | Enter ID=1 → change Name to “Amit” | Updated successfully         | As expected       | Pass       |
-| TC_04            | Delete student                 | Enter ID=1                         | Student deleted successfully | As expected       | Pass       |
-| TC_05            | Delete non-existent student    | Enter ID=5                         | Shows “Student not found”    | As expected       | Pass       |
+| **Test Case ID** | **Test Scenario**                   | **Test Steps / Input**                           | **Expected Output**                                                     | **Type**   |
+| ---------------- | ----------------------------------- | ------------------------------------------------ | ----------------------------------------------------------------------- | ---------- |
+| TC01             | Add a valid student                 | Enter ID: `101`, Name: `Sumit`, Age: `22`        | “Student added successfully!”                                           | ✅ Positive |
+| TC02             | View all students after adding      | Choose “View Students” after adding data         | Displays “101 Sumit 22”                                                 | ✅ Positive |
+| TC03             | Add multiple students               | Add 3–4 students with different IDs              | All students added successfully                                         | ✅ Positive |
+| TC04             | Update an existing student          | Enter ID: `101`, New Name: `Amit`, New Age: `23` | “Student updated successfully!”                                         | ✅ Positive |
+| TC05             | Delete an existing student          | Enter ID: `101`                                  | “Student deleted successfully!”                                         | ✅ Positive |
+| TC06             | View when no students exist         | Choose “View Students” with empty list           | “No students found.”                                                    | ✅ Positive |
+| TC07             | Try to update non-existing student  | Enter ID: `999`                                  | “Student not found.”                                                    | ❌ Negative |
+| TC08             | Try to delete non-existing student  | Enter ID: `999`                                  | “Student not found.”                                                    | ❌ Negative |
+| TC09             | Enter invalid menu choice           | Enter choice: `9`                                | “Invalid choice!”                                                       | ❌ Negative |
+| TC10             | Enter text instead of number for ID | Enter ID: `abc`                                  | InputMismatchException or invalid input message                         | ❌ Negative |
+| TC11             | Enter negative age                  | ID: `102`, Name: `Rahul`, Age: `-5`              | Should ideally reject, but in current code it accepts (can be improved) | ❌ Negative |
+| TC12             | Add duplicate ID                    | Add student with ID `101` again                  | Code allows it (but should ideally restrict duplicates)                 | ❌ Negative |
+| TC13             | Continuous add and delete           | Add → Delete → Add again                         | All operations work without crash                                       | ✅ Positive |
+| TC14             | Exit program                        | Enter choice: `5`                                | Program terminates                                                      | ✅ Positive |
+
