@@ -23,6 +23,9 @@ public class StudentManagement {
             System.out.println("2. View Students");
             System.out.println("3. Update Student");
             System.out.println("4. Delete Student");
+               System.out.println("4. Delete Student");
+               System.out.println("4. Delete Student");
+               System.out.println("4. Delete Student");
             System.out.println("5. Exit");
             System.out.print("Enter choice: ");
             int choice = sc.nextInt();
@@ -89,3 +92,4 @@ public class StudentManagement {
         System.out.println("Student not found.");
     }
 }
+
